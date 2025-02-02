@@ -1,0 +1,31 @@
+name: Generate Snake
+
+on:
+  schedule: # Run workflow automatically every 24 hours
+    - cron: "0 0 * * *"
+  push: # Trigger the workflow on push events
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Generate Snake
+        uses: Platane/snk@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output: dist/github-contribution-grid-snake.svg
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Generate snake"
+          branch: output
+          title: "Generate snake"
+          body: "Generated snake"
