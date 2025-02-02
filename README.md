@@ -22,3 +22,5 @@ You can reach me via email or connect with me on LinkedIn:
 
 [![Gmail](https://img.icons8.com/color/48/000000/gmail--v1.png)](mailto:4b.redd@gmail.com) 
 [![LinkedIn](https://img.icons8.com/color/48/000000/linkedin.png)](https://www.linkedin.com/in/carolinavieiraneto)
+
+![snake gif](https://github.com/Carol-Neto/Carol-Neto/blob/output/github-contribution-grid-snake.gif)
